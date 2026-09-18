@@ -30,7 +30,7 @@ export function ajouterApprenant ( nomComplet, ville){
 
 let newStudent = {
     id : apprenants.length + 1, 
-    nomcomplet : nomComplet,
+    nomComplet : nomComplet,
     ville : ville,
     resultats : []
 }
