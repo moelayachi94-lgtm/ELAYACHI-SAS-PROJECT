@@ -4,7 +4,7 @@ export function normaliserNom(nom) {
     return nom.trim().toLowerCase();
 }
 
-export function validerResultat(jour, exercicesTermines, totalExercices,) {
+export function validerResultat(jour, exercicesTermines, totalExercices, challengeTermine) {
     if (jour < 1 || jour > 7) {
         return false;
     }
@@ -16,12 +16,16 @@ export function validerResultat(jour, exercicesTermines, totalExercices,) {
     if ( exercicesTermines < 0 || totalExercices < 0){
         return false; 
     }
+
+    if (challengeTermine !== 1 && challengeTermine !== 0){
+        return false;
+    }
     return true;
 }
 
 export function ajouterApprenant ( nomComplet, ville){
- for ( let i of apprenants)
-    if (nomComplet === i.nomComplet)
+ for ( let item of apprenants)
+    if (nomComplet === item.nomComplet)
         return false ; 
 
 let newStudent = {
@@ -33,3 +37,4 @@ let newStudent = {
 apprenants.push(newStudent)
         return true 
 }
+

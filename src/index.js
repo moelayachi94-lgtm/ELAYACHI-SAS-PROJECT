@@ -1,3 +1,3 @@
-import { ajouterApprenant } from "./functions.js";
+import {validerResultat } from "./functions.js";
 
-console.log(ajouterApprenant("logos","oujda"));
+console.log(validerResultat(2,5,20,2));
