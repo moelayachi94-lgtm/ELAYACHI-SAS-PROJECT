@@ -38,3 +38,15 @@ apprenants.push(newStudent)
         return true 
 }
 
+export function rechercherapprenant(critere) {
+  for (let apprenant of apprenants) {
+    if (typeof critere === 'string') {
+      if (normalisernom(apprenant.nomComplet).includes(normalisernom(critere))) {
+        return apprenant;
+      }
+    } else if (critere === apprenant.id) {
+      return apprenant;
+    }
+  }
+  return null;
+}
